@@ -1,0 +1,19 @@
+N=int(input())
+Q=int(input())
+A=[]
+for i in range(N):
+    A.append(1)
+for j in range(Q):
+    say,deg=map(int,input().split())
+    if say==0:
+        A[deg-1] = 0
+    else:
+        sayac=0
+        poz=-1
+        for i in range(N):
+            if A[i]==1:
+                sayac+=1
+            if sayac==deg:
+                poz=i+1
+                break
+        print(poz)
